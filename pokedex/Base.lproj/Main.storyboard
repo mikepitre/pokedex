@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,11 +29,62 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8S-Eh-kBt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8a-Cd-Vh2">
+                                        <rect key="frame" x="236" y="17" width="128" height="39"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="H49-n7-dtR"/>
+                                            <constraint firstAttribute="height" constant="39" id="Ymu-md-u7K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="23"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sla-Ft-G9J">
+                                        <rect key="frame" x="567" y="24" width="25" height="25"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="TrC-7R-Es9"/>
+                                            <constraint firstAttribute="width" constant="25" id="Txn-AN-7cy"/>
+                                            <constraint firstAttribute="height" constant="32" id="fZU-pb-R8x"/>
+                                            <constraint firstAttribute="width" constant="32" id="vXq-Yq-gwy"/>
+                                        </constraints>
+                                        <state key="normal" image="noun_9837_cc"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="fZU-pb-R8x"/>
+                                                <exclude reference="vXq-Yq-gwy"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fAV-Zg-YAZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.33725490196078434" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Y8a-Cd-Vh2" firstAttribute="top" secondItem="b8S-Eh-kBt" secondAttribute="top" constant="17" id="1Gb-ES-Anl"/>
+                                    <constraint firstItem="Y8a-Cd-Vh2" firstAttribute="centerX" secondItem="b8S-Eh-kBt" secondAttribute="centerX" id="ASG-Ze-L42"/>
                                     <constraint firstAttribute="height" constant="55" id="HXW-NR-Jdx"/>
+                                    <constraint firstItem="Sla-Ft-G9J" firstAttribute="top" secondItem="b8S-Eh-kBt" secondAttribute="top" constant="12" id="Nc5-It-IlB"/>
+                                    <constraint firstItem="Sla-Ft-G9J" firstAttribute="top" secondItem="b8S-Eh-kBt" secondAttribute="top" constant="24" id="T46-iO-9SH"/>
+                                    <constraint firstItem="Sla-Ft-G9J" firstAttribute="top" secondItem="b8S-Eh-kBt" secondAttribute="top" constant="12" id="Xyg-3H-zAy"/>
+                                    <constraint firstItem="Y8a-Cd-Vh2" firstAttribute="top" secondItem="b8S-Eh-kBt" secondAttribute="top" constant="17" id="iv9-7C-VUG"/>
+                                    <constraint firstItem="Y8a-Cd-Vh2" firstAttribute="centerY" secondItem="b8S-Eh-kBt" secondAttribute="centerY" id="ojz-iJ-cYG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sla-Ft-G9J" secondAttribute="trailing" constant="8" id="py2-dO-K5H"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sla-Ft-G9J" secondAttribute="trailing" constant="8" id="sZl-jb-NdC"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1Gb-ES-Anl"/>
+                                        <exclude reference="ojz-iJ-cYG"/>
+                                        <exclude reference="Nc5-It-IlB"/>
+                                        <exclude reference="Xyg-3H-zAy"/>
+                                        <exclude reference="py2-dO-K5H"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Jii-wy-w1d">
                                 <rect key="frame" x="0.0" y="55" width="600" height="44"/>
@@ -130,5 +186,6 @@
     <resources>
         <image name="4" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="noun_9837_cc" width="700" height="608"/>
     </resources>
 </document>
