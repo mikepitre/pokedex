@@ -20,6 +20,7 @@
 		8F2F64241BF534CB004E023F /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F64231BF534CB004E023F /* music.mp3 */; };
 		8F2F64261BF595F8004E023F /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F64251BF595F8004E023F /* PokemonDetailVC.swift */; };
 		8F2F64281BF59CB7004E023F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F64271BF59CB7004E023F /* Main.storyboard */; };
+		8F2F642A1BF66FCD004E023F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F64291BF66FCD004E023F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8F2F64231BF534CB004E023F /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		8F2F64251BF595F8004E023F /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 		8F2F64271BF59CB7004E023F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8F2F64291BF66FCD004E023F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AE87F6179DC1C2B044F79E7F /* Pods-pokedex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokedex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pokedex/Pods-pokedex.debug.xcconfig"; sourceTree = "<group>"; };
 		D294478E9B28B720423867A3 /* Pods-pokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokedex.release.xcconfig"; path = "Pods/Target Support Files/Pods-pokedex/Pods-pokedex.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				8F2F641D1BF526D4004E023F /* csv.swift */,
+				8F2F64291BF66FCD004E023F /* Constants.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				8F01DD661BED300C00BA26A4 /* ViewController.swift in Sources */,
 				8F01DD641BED300C00BA26A4 /* AppDelegate.swift in Sources */,
 				8F2F64261BF595F8004E023F /* PokemonDetailVC.swift in Sources */,
+				8F2F642A1BF66FCD004E023F /* Constants.swift in Sources */,
 				8F01DD7B1BED32EF00BA26A4 /* Pokemon.swift in Sources */,
 				8F2F641E1BF526D4004E023F /* csv.swift in Sources */,
 			);

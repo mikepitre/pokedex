@@ -31,6 +31,14 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad()
         {
         super.viewDidLoad()
+            
+        nameLbl.text = pokemon.name.capitalizedString
+        mainImg.image = UIImage(named: "\(pokemon.pokedexId)")
+            
+        pokemon.downloadPokemonDetails { () -> () in
+            //this will be called when download is done
+            
+            }
         }
 
     override func didReceiveMemoryWarning()
