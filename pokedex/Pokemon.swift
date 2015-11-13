@@ -43,9 +43,55 @@ class Pokemon
     func downloadPokemonDetails(completed: DownloadComplete)
         {
         let url = NSURL(string: _pokemonUrl)!
-        Alamofire.request(.GET, url).responseJSON { response in
+        Alamofire.request(.GET, url).responseJSON
+            {
+            response in
             let result = response.result
-            print(result.value.debugDescription)
+            if let dict = result.value as? Dictionary<String, AnyObject>
+                {
+                if let defense = dict["defense"] as? Int
+                    {
+                    self._defense = "\(defense)"
+                    }
+                if let height = dict["height"] as? String
+                    {
+                    self._height = height
+                    }
+                if let weight = dict["weight"] as? String
+                    {
+                    self._weight = weight
+                    }
+                if let attack = dict["attack"] as? Int
+                    {
+                    self._attack = "\(attack)"
+                    }
+                if let types = dict["types"] as? [Dictionary<String, String>]
+                    {
+                    if let type = types[0]["name"]
+                        {
+                        self._type = type
+                        }
+                    if types.count > 1
+                        {
+                        for var x = 1; x < types.count; x++
+                            {
+                            if let type = types[x]["name"]
+                                {
+                                self._type! += "/\(type)"
+                                }
+                            }
+                        }
+                    } else
+                        {
+                        self._type = ""
+                        }
+                    
+                print(self._defense)
+                print(self._height)
+                print(self._weight)
+                print(self._attack)
+                print(self._type)
+                }
             }
         }
 }
