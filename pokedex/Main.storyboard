@@ -226,6 +226,9 @@
                                                 <exclude reference="eX4-py-X3Z"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="MSy-mf-qHO" eventType="touchUpInside" id="Vcn-j6-Fqx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -451,6 +454,20 @@
                             <constraint firstAttribute="trailingMargin" secondItem="7oY-Ej-Ogd" secondAttribute="trailing" id="yU3-pD-K6a"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="baseAttackLbl" destination="wtf-k9-vfK" id="ccK-Wr-uQI"/>
+                        <outlet property="currentEvoImg" destination="wkq-WS-Hkc" id="gTy-HQ-CHT"/>
+                        <outlet property="defenseLbl" destination="aA5-NP-o9o" id="Sgp-3a-iza"/>
+                        <outlet property="descLbl" destination="jTF-Ph-8T8" id="g58-ic-KuA"/>
+                        <outlet property="evoLbl" destination="cSr-ai-lDJ" id="dfW-60-V3A"/>
+                        <outlet property="heightLbl" destination="2tu-3l-ZmR" id="MtR-7i-6mw"/>
+                        <outlet property="mainImg" destination="PAs-xb-PcO" id="0rh-zW-ihJ"/>
+                        <outlet property="nameLbl" destination="Ywb-FZ-cRY" id="Otn-Ax-Vfv"/>
+                        <outlet property="nextEvoImg" destination="Ifd-7q-fDM" id="aTo-3V-VUH"/>
+                        <outlet property="pokedexLbl" destination="gfX-fm-FsI" id="85Z-Q5-Hvb"/>
+                        <outlet property="typeLbl" destination="fHO-Fe-Iqb" id="FQA-m2-AzU"/>
+                        <outlet property="weightLbl" destination="wVi-xn-vaf" id="Cmb-3F-W91"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gif-0q-cFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
