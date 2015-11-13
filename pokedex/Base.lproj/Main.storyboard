@@ -86,10 +86,10 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Jii-wy-w1d">
+                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" placeholder="Search for Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="Jii-wy-w1d">
                                 <rect key="frame" x="0.0" y="55" width="600" height="44"/>
                                 <animations/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n4u-9Q-aZp">
                                 <rect key="frame" x="20" y="119" width="560" height="461"/>
@@ -176,6 +176,7 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="n4u-9Q-aZp" id="YP6-PL-AE9"/>
+                        <outlet property="searchBar" destination="Jii-wy-w1d" id="zoI-dr-egP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
