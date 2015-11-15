@@ -21,6 +21,7 @@ class Pokemon
     private var _attack: String!
     private var _nextEvolutionTxt: String!
     private var _nextEvolutionId: String!
+    private var _nextEvolutionLvl: String!
     private var _pokemonUrl: String!
     
     var name: String
@@ -31,6 +32,51 @@ class Pokemon
     var  pokedexId: Int
         {
         return _pokedexId
+        }
+    
+    var desc: String
+        {
+        return _desc
+        }
+    
+    var type: String
+        {
+        return _type
+        }
+    
+    var defense: String
+        {
+        return _defense
+        }
+    
+    var height: String
+        {
+        return _height
+        }
+    
+    var weight: String
+        {
+        return _weight
+        }
+    
+    var attack: String
+        {
+        return _attack
+        }
+    
+    var nextEvolutionTxt: String
+        {
+        return _nextEvolutionTxt
+        }
+    
+    var nextEvolutionId: String
+        {
+        return _nextEvolutionId
+        }
+    
+    var nextEvolutionLvl: String
+        {
+        return _nextEvolutionLvl
         }
     
     init(name:String, pokedexId: Int)
@@ -129,12 +175,19 @@ class Pokemon
                             {
                             if let uri = evolutions[0]["resource_uri"] as? String
                                 {
+                                //not supporting mega evolutions, if evolution contains "mega" then ignore it
                                 let newStr = uri.stringByReplacingOccurrencesOfString(URL_POKEMON, withString: "")
                                 let num = newStr.stringByReplacingOccurrencesOfString("/", withString: "")
                                 self._nextEvolutionId = num
                                 self._nextEvolutionTxt = to
                                 print(self._nextEvolutionTxt)
                                 print(self._nextEvolutionId)
+                                
+                                if let lvl = evolutions[0]["level"] as? Int
+                                    {
+                                    self._nextEvolutionLvl = "\(lvl)"
+                                    print(self._nextEvolutionLvl)
+                                    }
                                 }
                              }
                         }
