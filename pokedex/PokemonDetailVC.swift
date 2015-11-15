@@ -35,9 +35,32 @@ class PokemonDetailVC: UIViewController {
         nameLbl.text = pokemon.name.capitalizedString
         mainImg.image = UIImage(named: "\(pokemon.pokedexId)")
             
-        pokemon.downloadPokemonDetails { () -> () in
+        pokemon.downloadPokemonDetails
+            { () -> () in
             //this will be called when download is done
-            
+            self.updateUI()
+            }
+        }
+    
+    func updateUI()
+        {
+        descLbl.text = pokemon.desc
+        typeLbl.text = pokemon.type
+        defenseLbl.text = pokemon.defense
+        heightLbl.text = pokemon.height
+        pokedexLbl.text = pokemon.pokedexId
+        weightLbl.text = pokemon.weight
+        baseAttackLbl.text = pokemon.attack
+        currentEvoImg.image = mainImg.image
+        nextEvoImg.image = UIImage(named: "\(pokemon.nextEvolutionId)")
+        if pokemon.nextEvolutionLvl == ""
+            {
+            evoLbl.text = "\(pokemon.name.capitalizedString) is the Final Evolution"
+            nextEvoImg.hidden = true
+            }
+        else
+            {
+            evoLbl.text = "Next Evolution: \(pokemon.nextEvolutionTxt) @ LVL \(pokemon.nextEvolutionLvl)"
             }
         }
 

@@ -29,9 +29,9 @@ class Pokemon
         return _name
         }
     
-    var  pokedexId: Int
+    var  pokedexId: String
         {
-        return _pokedexId
+        return "\(_pokedexId)"
         }
     
     var desc: String
@@ -66,17 +66,38 @@ class Pokemon
     
     var nextEvolutionTxt: String
         {
-        return _nextEvolutionTxt
+        if _nextEvolutionTxt == nil
+            {
+            return ""
+            }
+        else
+            {
+            return _nextEvolutionTxt
+            }
         }
     
     var nextEvolutionId: String
         {
-        return _nextEvolutionId
+        if _nextEvolutionId == nil
+            {
+            return ""
+            }
+        else
+            {
+            return _nextEvolutionId
+            }
         }
     
     var nextEvolutionLvl: String
         {
-        return _nextEvolutionLvl
+        if _nextEvolutionLvl == nil
+            {
+            return ""
+            }
+        else
+            {
+            return _nextEvolutionLvl
+            }
         }
     
     init(name:String, pokedexId: Int)
