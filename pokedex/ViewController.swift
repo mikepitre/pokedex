@@ -150,9 +150,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(searchBar: UISearchBar)
+        {
         view.endEditing(true)
-    }
+        }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String)
         {
@@ -171,7 +172,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+        {
         if segue.identifier == "PokemonDetailVC"
             {
             if let detailsVC = segue.destinationViewController as? PokemonDetailVC
@@ -182,6 +184,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     }
                 }
             }
+        }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+        {
+        self.view.endEditing(true)
+        }
+    
+    func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
+        searchBar.resignFirstResponder()
+        return true
     }
 
 }

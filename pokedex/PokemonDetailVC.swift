@@ -55,7 +55,7 @@ class PokemonDetailVC: UIViewController {
         nextEvoImg.image = UIImage(named: "\(pokemon.nextEvolutionId)")
         if pokemon.nextEvolutionLvl == ""
             {
-            evoLbl.text = "\(pokemon.name.capitalizedString) is the Final Evolution"
+            evoLbl.text = "No Evolutions"
             nextEvoImg.hidden = true
             }
         else
